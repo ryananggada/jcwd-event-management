@@ -5,23 +5,25 @@ import {
   ButtonGroup,
   Button,
   Spacer,
-} from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
+} from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <Flex minWidth='max-content' alignItems='center' gap='2' padding='16px'>
-      <Box p='2'>
-        <Link to='/'>
-          <Heading size='md'>Chakra App</Heading>
+    <Flex minWidth="max-content" alignItems="center" gap="2" padding="16px">
+      <Box p="2">
+        <Link to="/">
+          <Heading size="md">
+            <img src="./LogoTicket.png" alt="" />
+          </Heading>
         </Link>
       </Box>
       <Spacer />
-      <ButtonGroup gap='2'>
-        <Link to='/another-page'>
-          <Button colorScheme='teal'>Another page</Button>
+      <ButtonGroup gap="2">
+        <Link to="/another-page">
+          <Button colorScheme="teal">Another page</Button>
         </Link>
-        <Button colorScheme='teal'>Log in</Button>
+        <Button colorScheme="teal">Log in</Button>
       </ButtonGroup>
     </Flex>
   );
