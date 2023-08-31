@@ -20,9 +20,11 @@ function Navbar() {
       <Spacer />
       <ButtonGroup gap='2'>
         <Link to='/another-page'>
-          <Button colorScheme='teal'>Another page</Button>
+          <Button colorScheme='teal'>Log In</Button>
         </Link>
-        <Button colorScheme='teal'>Log in</Button>
+        <Link to='/registration-page'>
+          <Button colorScheme='teal'>Sign Up</Button>
+        </Link>
       </ButtonGroup>
     </Flex>
   );
