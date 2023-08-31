@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Flex } from '@chakra-ui/react';
 import Navbar from './components/Navbar';
-import MainPage from './pages/mainPage';
+import MainPage from './pages/MainPage';
 import AnotherPage from './pages/AnotherPage';
 
 function App() {
