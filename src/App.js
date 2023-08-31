@@ -6,11 +6,11 @@ import AnotherPage from './pages/AnotherPage';
 
 function App() {
   return (
-    <Flex direction='column' minHeight='100vh'>
+    <Flex direction="column" minHeight="100vh">
       <Navbar />
       <Routes>
-        <Route path='/' element={<MainPage />} />
-        <Route path='/another-page' element={<AnotherPage />} />
+        <Route path="/" element={<MainPage />} />
+        <Route path="/another-page" element={<AnotherPage />} />
       </Routes>
     </Flex>
   );

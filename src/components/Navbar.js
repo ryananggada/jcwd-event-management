@@ -5,6 +5,7 @@ import {
   ButtonGroup,
   Button,
   Spacer,
+
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import logoTicket from '../assets/LogoTicket.png';
@@ -18,11 +19,11 @@ function Navbar() {
         </Link>
       </Box>
       <Spacer />
-      <ButtonGroup gap='2'>
-        <Link to='/another-page'>
-          <Button colorScheme='teal'>Another page</Button>
+      <ButtonGroup gap="2">
+        <Link to="/another-page">
+          <Button colorScheme="teal">Another page</Button>
         </Link>
-        <Button colorScheme='teal'>Log in</Button>
+        <Button colorScheme="teal">Log in</Button>
       </ButtonGroup>
     </Flex>
   );
