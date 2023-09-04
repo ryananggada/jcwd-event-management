@@ -1,0 +1,25 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "firstname": "wawaw",
+            "lastname": "wawuwaw",
+            "email": "wawaw@wawaw.com",
+            "password": "Wawaw12"
+        },
+        {
+            "firstName": "Joko",
+            "lastName": "Prabowo",
+            "email": "jokowiprabowo@gmail.com",
+            "password": "1000Periode!",
+            "id": 2
+        },
+        {
+            "firstName": "Beje",
+            "lastName": "Subeje",
+            "email": "besu@beje.coy",
+            "password": "Anakpapa1!",
+            "id": 3
+        }
+    ]
+}
