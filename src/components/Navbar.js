@@ -5,23 +5,27 @@ import {
   ButtonGroup,
   Button,
   Spacer,
-  Text
+  Text,
+  Popover,
+  PopoverTrigger,
+  Portal,
+  PopoverContent
 
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import logoTicket from '../assets/LogoTicket.png';
+import LogoTicket from '../assets/LogoTicket.png';
 
 function Navbar() {
   return (
     <Flex minWidth='max-content' alignItems='center' gap='2' padding='16px'>
       <Box color chp='2'>
         <Link to='/'>
-          <Text>Logo</Text>
+
         </Link>
       </Box>
       <Spacer />
       <ButtonGroup gap='2'>
-        <Link to='/another-page'>
+        <Link to='/login'>
           <Button colorScheme='teal'>Login</Button>
         </Link>
         <Link to='/registration-page'>
