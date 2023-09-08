@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import MainPage from './pages/MainPage';
 import AnotherPage from './pages/AnotherPage';
 import RegistrationPage from './pages/RegistrationPage';
+import Login from './pages/Login';
 
 
 
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<MainPage />} />
         <Route path='/another-page' element={<AnotherPage />} />
         <Route path='/registration-page' element={<RegistrationPage />} />
+        <Route path='login' element={<Login />} />
       </Routes>
     </Flex>
   );
