@@ -6,12 +6,15 @@ import {
   Input,
   Stack,
   Text,
+  useToast,
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const AddEventPage = () => {
+  const toast = useToast();
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -28,7 +31,7 @@ const AddEventPage = () => {
       type: Yup.string().required("this field is required"),
     }),
     validateOnChange: false,
-    onSubmit: (value) => {
+    onSubmit: (value, forms) => {
       setTimeout(async () => {
         //ngepost ke database
         const input = {
@@ -40,13 +43,23 @@ const AddEventPage = () => {
         };
 
         try {
-          await axios.post("http://localhost:3000/ticket", input);
+          await axios.post("http://localhost:3001/ticket", input);
 
           formik.setSubmitting(false);
         } catch (err) {
           formik.setSubmitting(false);
           console.log(err);
+
+          toast({
+            status: "error",
+            title: "Something wrong",
+            description: err.message,
+            isClosable: true,
+            duration: 3000,
+          });
         }
+        forms.resetForm();
+
         console.log(value);
       }, 3000);
     },
@@ -61,44 +74,34 @@ const AddEventPage = () => {
             onChange={(e) => formik.setFieldValue("name", e.target.value)}
             placeholder="Event Name"
           />
-          <FormHelperText error={false}>
-            {formik.errors.name || ""}
-          </FormHelperText>
+          <FormHelperText>{formik.errors.name || ""}</FormHelperText>
 
           <Input
             name="date"
             onChange={(e) => formik.setFieldValue("date", e.target.value)}
             placeholder="Date and Time"
           />
-          <FormHelperText error={false}>
-            {formik.errors.date || ""}
-          </FormHelperText>
+          <FormHelperText>{formik.errors.date || ""}</FormHelperText>
 
           <Input
             name="location"
             onChange={(e) => formik.setFieldValue("location", e.target.value)}
             placeholder="Location"
           />
-          <FormHelperText error={false}>
-            {formik.errors.location || ""}
-          </FormHelperText>
+          <FormHelperText>{formik.errors.location || ""}</FormHelperText>
           <Input
             name="desc"
             onChange={(e) => formik.setFieldValue("desc", e.target.value)}
             placeholder="Description"
           />
-          <FormHelperText error={false}>
-            {formik.errors.desc || ""}
-          </FormHelperText>
+          <FormHelperText>{formik.errors.desc || ""}</FormHelperText>
 
           <Input
             name="type"
             onChange={(e) => formik.setFieldValue("type", e.target.value)}
             placeholder="Ticket Type"
           />
-          <FormHelperText error={false}>
-            {formik.errors.type || ""}
-          </FormHelperText>
+          <FormHelperText>{formik.errors.type || ""}</FormHelperText>
         </FormControl>
       </Stack>
       <Button
