@@ -17,10 +17,12 @@ function Navbar() {
         <Image src={logoTicket} />
       </Link>
       <ButtonGroup gap="2">
-        <Link to="/another-page">
-          <Button backgroundColor={"#e38100"}>Another page</Button>
+        <Link to="/login">
+          <Button backgroundColor={"#e38100"}>Login</Button>
         </Link>
-        <Button backgroundColor={"#e38100"}>Log in</Button>
+        <Link to="registration-page">
+          <Button backgroundColor={"#e38100"}>Sign Up</Button>
+        </Link>
       </ButtonGroup>
     </Box>
   );

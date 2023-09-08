@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Flex } from "@chakra-ui/react";
 import Navbar from "./components/Navbar";
 import MainPage from "./pages/MainPage";
-import AnotherPage from "./pages/AnotherPage";
+import RegistrationPage from "./pages/RegistrationPage";
 import AddEventPage from "./pages/AddEvent";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/add-event" element={<AddEventPage />} />
         <Route path="/" element={<MainPage />} />
-        <Route path="/another-page" element={<AnotherPage />} />
+        <Route path="/registration-page" element={<RegistrationPage />} />
       </Routes>
     </Flex>
   );

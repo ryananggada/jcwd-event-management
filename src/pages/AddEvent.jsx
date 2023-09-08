@@ -43,7 +43,7 @@ const AddEventPage = () => {
         };
 
         try {
-          await axios.post("http://localhost:3001/ticket", input);
+          await axios.post("http://localhost:3001/tickets", input);
 
           formik.setSubmitting(false);
         } catch (err) {
