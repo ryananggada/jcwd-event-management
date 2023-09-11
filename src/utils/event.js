@@ -1,11 +1,11 @@
 
-
+// TODO: Ubah menjadi suatu slice
 class Event {
     organizer = ""
     name = ""
     dateStart
     dateEnd
-    // Date includes time, so no time slot needed.
+    // ...Miliseconds?
     location = ""
     description = ""
     tags = []
