@@ -29,14 +29,217 @@
       "id": 4
     }
   ],
-  "tickets": [
+  "events" : [
     {
-      "name": "vcdhggh",
-      "date": "thgxtdjg",
-      "location": "tgcbujh",
-      "desc": "tghcj",
-      "type": "tgfchkj",
-      "id": 1
+      "id" :1,
+      "genre" :"pop",
+      "artist" :"Westlife",
+      "date" :"12 Sep 2023",
+      "time" :"19:00 - 22:00 WIB",
+      "location" :"Rutan Nusakambangan",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing ",
+      "image": "https://cdn1-production-images-kly.akamaized.net/TxFjVh9W0YAeKK_Gn8TXP7ka7ak=/1200x1200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4032082/original/093174500_1653374936-283173361_1150899232147122_4030910221406602531_n.jpg"
+    },
+    {
+      "id":2,
+      "genre": "jazz",
+      "artist": "Chick Corea",
+      "date" :"2 Des 2023",
+      "time" :"16:00 - 20:00 WIB",
+      "location" :"Taman Jajan BSD",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing ",
+      "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fopen.spotify.com%2Fintl-id%2Fartist%2F5olDKSsFhhmwh8UCWwKtpq&psig=AOvVaw1b13y9T6tykunz6L-vHd9a&ust=1694331874412000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIjji56EnYEDFQAAAAAdAAAAABAE"
+    },
+    {
+      "id":3,
+      "genre": "rock",
+      "artist": "Gun N Roses",
+      "date" :"12 Feb 2024",
+      "time" :"20:00 - 23:00 WIB",
+      "location" :"Panti Pijat Sehat Bersih",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing ",
+      "image":"https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.medcom.id%2Fdynamic%2Fcontent%2F2016%2F01%2F06%2F467685%2FKk3UzGrAkw.jpg%3Fw%3D700&tbnid=Zm9AO5N69h1CMM&vet=12ahUKEwj1m4vihp2BAxXz7DgGHU0eDjAQMygBegQIARBK..i&imgrefurl=https%3A%2F%2Fwww.medcom.id%2Fhiburan%2Fmusik%2F0kp7qWnb-reuni-gnr-axl-rose-dan-slash-benci-tapi-rindu&docid=Fwtrf3igNcAwFM&w=690&h=500&q=GNR&ved=2ahUKEwj1m4vihp2BAxXz7DgGHU0eDjAQMygBegQIARBK"
+    },
+    {
+      "id":4,
+      "genre": "old",
+      "artist": "Frank Sinatra",
+      "date" :"20 Des 2023",
+      "time" :"15:00 - 18:00 WIB",
+      "location" :"SDN Depok",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn1-production-images-kly.akamaized.net%2FJ9WNoyw6AqyhJCTP0R8av378Pz8%3D%2F800x1066%2Fsmart%2Ffilters%3Aquality(75)%3Astrip_icc()%3Aformat(webp)%2Fkly-media-production%2Fmedias%2F1051004%2Foriginal%2F0cec9823a98ee23ac44cfe0509c21951ui8mw3r9y.jpg&tbnid=USgBrlYeUIRXHM&vet=12ahUKEwjA0rWAiJ2BAxWz5TgGHVahD9sQMygCegQIARBK..i&imgrefurl=https%3A%2F%2Fwww.liputan6.com%2Fshowbiz%2Fread%2F3156194%2Fterkuak-frank-sinatra-sempat-alami-depresi&docid=XG56ZleVoOPQfM&w=800&h=1066&q=frank%20sinatra&ved=2ahUKEwjA0rWAiJ2BAxWz5TgGHVahD9sQMygCegQIARBK"
+    },
+    {
+      "id":5,
+      "genre": "metal",
+      "artist": "Dream Theater",
+      "date" :"2 Agus 2023",
+      "time" :"21:00 - 24:00 WIB",
+      "location" :"Kolong Flyover",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",  
+      "image":"https://www.google.com/imgres?imgurl=https%3A%2F%2Fassets.pikiran-rakyat.com%2Fcrop%2F0x0%3A0x0%2Fx%2Fphoto%2F2021%2F10%2F27%2F4150834025.jpg&tbnid=0ejpXeWKerGmjM&vet=12ahUKEwj_-qCPiJ2BAxV7yaACHcI3DSQQMygEegQIARBK..i&imgrefurl=https%3A%2F%2Fkarawangpost.pikiran-rakyat.com%2Fhiburan%2Fpr-1422885638%2Fdream-theater-luncurkan-album-terbarunya-a-view-from-the-top-of-the-world&docid=lqjBKs1O7sh1BM&w=1920&h=1080&q=dream%20theater&ved=2ahUKEwj_-qCPiJ2BAxV7yaACHcI3DSQQMygEegQIARBK"
+    },
+    {
+      "id":6,
+      "genre": "pop",
+      "artist": "Tulus",
+      "date" :"2 Mar 2024",
+      "time" :"16:00 - 19:00 WIB",
+      "location" :"Kali Cisadane",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/imgres?imgurl=https%3A%2F%2Fyt3.googleusercontent.com%2F564wbsfhipcNB1kLFlgD-_tnN4ejPs1ZLzXj4uQ4RE5xhSPiUHOazHDGAVY4ZLHKeDZTkRDhgQ%3Ds900-c-k-c0x00ffffff-no-rj&tbnid=F9lLtaZBfE2HYM&vet=12ahUKEwjO-_-RlJ2BAxWcnWMGHbjTCZcQMygAegQIARBU..i&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCRggxhdYIz0zSvUgJmCWMGg&docid=mRtek9nPYkV9AM&w=900&h=900&q=tulus&ved=2ahUKEwjO-_-RlJ2BAxWcnWMGHbjTCZcQMygAegQIARBU"
+    },
+    {
+      "id":7,
+      "genre": "pop",
+      "artist": "Raiso",
+      "date" :"2 Sep 2023",
+      "time" :"01:00 - 03:00 WIB",
+      "location" :"Basement",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn-assetd.kompas.id%2F42HF3uY8qwwfeqcVp0ujKyIKqW4%3D%2F1024x576%2Fhttps%253A%252F%252Fasset.kgnewsroom.com%252Fphoto%252Fpre%252F2022%252F03%252F04%252Fa43c0053-44af-48ab-b0c2-c72f0ba4dbcb_png.jpg&tbnid=QVcciBkekAvVyM&vet=12ahUKEwjnwZ-0lJ2BAxXO6DgGHTA6D6wQMygEegQIARBV..i&imgrefurl=https%3A%2F%2Fwww.kompas.id%2Fbaca%2Fnama-peristiwa%2F2022%2F03%2F03%2Fraisa-sudah-percaya-diri&docid=ssAIzOmgZcw3YM&w=1024&h=576&q=raisa&ved=2ahUKEwjnwZ-0lJ2BAxXO6DgGHTA6D6wQMygEegQIARBV"
+    },
+    {
+      "id":8,
+      "genre": "rock",
+      "artist": "Foo Fighter",
+      "date" :"2 Des 2025",
+      "time" :"16:00 - 18:00 WIB",
+      "location" :"Jalan Raya Bogor",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.telegraph.co.uk%2Fcontent%2Fdam%2Fmusic%2F2017%2F09%2F15%2FTELEMMGLPICT000140208836_trans_NvBQzQNjv4BqvB5LaUc5OAoESmrCQlSkUCTz-a8bpLDE-71jYDC6yd4.jpeg%3Fimwidth%3D680&tbnid=0HogoBXS1I4whM&vet=12ahUKEwi65fbzlJ2BAxV4p2MGHZerCuEQMygCegQIARBO..i&imgrefurl=https%3A%2F%2Fwww.telegraph.co.uk%2Fmusic%2Fartists%2Ffoo-fighters-concrete-gold-reviewoverly-familiar-despite-presence%2F&docid=k6n4FUl3p0aEjM&w=680&h=425&q=foo%20fighters&ved=2ahUKEwi65fbzlJ2BAxV4p2MGHZerCuEQMygCegQIARBO"
+    },
+    {
+      "id":9,
+      "genre": "rnb",
+      "artist": "Stevie Wonder",
+      "date" :"7 Okt 2023",
+      "time" :"11:00 - 14:00 WIB",
+      "location" :"Panti Asuhan",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.britannica.com%2Fbiography%2FStevie-Wonder&psig=AOvVaw15jW05ruUwxtcpsgyHAOhb&ust=1694336377450000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJDwpYGVnYEDFQAAAAAdAAAAABAE"
+    },
+    {
+      "id":10,
+      "genre": "old",
+      "artist": "Dean Martin",
+      "date" :"1 Jan 2024",
+      "time" :"04:00 - 06:00 WIB",
+      "location" :"Halte Puri Beta",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fdhinckley.medium.com%2Fconsider-the-possibility-that-dean-martin-really-did-give-a-dd8451448786&psig=AOvVaw3AXL3E9tuYgUar6AHRslEO&ust=1694336408518000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLj3jZCVnYEDFQAAAAAdAAAAABAE"
+    },
+    {
+      "id":11,
+      "genre": "rock",
+      "artist": "Rollimg Stones",
+      "date" :"31 Des 2023",
+      "time" :"16:00 - 20:00 WIB",
+      "location" :"TPU Selapajang",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fcelebrity.okezone.com%2Fread%2F2020%2F09%2F08%2F205%2F2274704%2Falasan-the-rolling-stones-masih-aktif-bermusik-di-usia-senja&psig=AOvVaw09r5jN97AxBYJCLBFqo7Rv&ust=1694336435263000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJDj_5yVnYEDFQAAAAAdAAAAABAE"
+    },
+    {
+      "id":12,
+      "genre": "metal",
+      "artist": "Korn",
+      "date" :"21 Mei 2024",
+      "time" :"14:00 - 16:00 WIB",
+      "location" :"TPU Joglo",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fvoi.id%2Fmusik%2F1389%2Fkorn-yang-emoh-disebut-band-rap-metal&psig=AOvVaw2OZbwiwXk7ou3RmIEcqkc_&ust=1694336473289000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCNiOh6-VnYEDFQAAAAAdAAAAABAI"
+    },
+    {
+      "id":13,
+      "genre": "Fusion",
+      "artist": "Casiopea",
+      "date" :"2 Apr 2024",
+      "time" :"15:00 - 18:00 WIB",
+      "location" :"Gedung Serbaguna",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwartajazz.com%2Fnews%2F2012%2F09%2F21%2Fkapsul-waktu-casiopea%2F&psig=AOvVaw0LM8t40e63fjpHYyg3dqJu&ust=1694336497627000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPC50rqVnYEDFQAAAAAdAAAAABAE"
+    },
+    {
+      "id":14,
+      "genre": "bossa",
+      "artist": "Antonio Carlos Jobim",
+      "date" :"14 Sep 2023",
+      "time" :"10:00 - 13:00 WIB",
+      "location" :"Gedung Bhayangkara",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.britannica.com%2Fbiography%2FAntonio-Carlos-Jobim&psig=AOvVaw0LtPC5IXwLl6a3E5Qpvrtk&ust=1694336523661000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJjsiMeVnYEDFQAAAAAdAAAAABAJ"
+    },
+    {
+      "id":15,
+      "genre": "bossa",
+      "artist": "Al Jarreau",
+      "date" :"1 Des 2023",
+      "time" :"08:00 - 11:00 WIB",
+      "location" :"Kalijodo",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.liputan6.com%2Fshowbiz%2Fread%2F2854361%2Fsebelum-meninggal-al-jarreau-menuai-prestasi-dan-inspirasi&psig=AOvVaw1ScAuFFT-2aKEe1IsBGj9Y&ust=1694336554826000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIDB7NWVnYEDFQAAAAAdAAAAABAE"
+    },
+    {
+      "id":16,
+      "genre": "rnb",
+      "artist": "Earth Wind and Fire",
+      "date" :"14 Nov 2023",
+      "time" :"00:00 - 04:00 WIB",
+      "location" :"Kantor Polisi",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.discogs.com%2Fartist%2F22164-Earth-Wind-Fire&psig=AOvVaw3HyAjjOCjVwi3cw8LdxgHK&ust=1694336591974000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIDb1-eVnYEDFQAAAAAdAAAAABAT"
+    },
+    {
+      "id":17,
+      "genre": "pop",
+      "artist": "Carpenter",
+      "date" :"9 Juli 2024",
+      "time" :"17:00 - 20:00 WIB",
+      "location" :"Stasiun tn. Abang",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FCarpenters-Complete-Guides-Music%2Fdp%2F0711963126&psig=AOvVaw3tMF-eAcxeg9NywxXd1bPC&ust=1694336681801000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKDXtZKWnYEDFQAAAAAdAAAAABAE"
+    },
+    {
+      "id":18,
+      "genre": "pop",
+      "artist": "ABBA",
+      "date" :"13 Juni 2024",
+      "time" :"07:00 - 20:00 WIB",
+      "location" :"Parkiran Indomaret",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Flampung.antaranews.com%2Fberita%2F630941%2Fdatang-dari-penjuru-dunia-demi-konser-abba&psig=AOvVaw3VRPgt-iq0yeIrvV5yUGtP&ust=1694336710426000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJCYhqCWnYEDFQAAAAAdAAAAABAE"
+    },
+    {
+      "id":19,
+      "genre": "Fusion",
+      "artist": "Shakatak",
+      "date" :"15 Apr 2024",
+      "time" :"16:00 - 20:00 WIB",
+      "location" :"Lapangan Tembak",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FBest-Shakatak%2Fdp%2FB009JOT3CY&psig=AOvVaw3Zxd_b5bZ5xBcMLuojvyVO&ust=1694336763401000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCND6rLmWnYEDFQAAAAAdAAAAABAE"
+    },
+    {
+      "id":20,
+      "genre": "jazz",
+      "artist": "George Duke",
+      "date" :"2 Jan 2024",
+      "time" :"16:00 - 22:00 WIB",
+      "location" :"Kebon Binatang",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.mps-music.com%2Fgeorge-duke%2F&psig=AOvVaw1PQ5mTxBqxFRl9qdTlIAy5&ust=1694336794540000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPjmnciWnYEDFQAAAAAdAAAAABAE"
+    },
+    {
+      "id":21,
+      "genre": "pop",
+      "artist": "Bee Gees",
+      "date" :"2 Okt 2024",
+      "time" :"12:00 - 23:00 WIB",
+      "location" :"Taman Makam Pahlawan",
+      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fcianjur.jabarekspres.com%2F2023%2F04%2F25%2Ftiga-bersaudara-gibb%2F&psig=AOvVaw1fBzvmsHenzB52FvNKI8yb&ust=1694336825338000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDC79aWnYEDFQAAAAAdAAAAABAE"
     }
+
   ]
 }
