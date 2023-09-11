@@ -57,7 +57,6 @@ function Login() {
                 }
 
                 const [userProfile] = filteredUser;
-                dispatch(login(userProfile));
 
                 toast({
                     status: "success",
@@ -66,6 +65,7 @@ function Login() {
                     isClosable: true,
                     duration: 3000,
                     onCloseComplete: () => {
+                        dispatch(login(userProfile));
                         form.resetForm();
                         navigate("/");
                     },
