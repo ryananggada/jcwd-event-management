@@ -1,3 +1,4 @@
+
 import { Box, Input, Image, Center } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import wallpaper from "../assets/wallpaper.png";
@@ -18,6 +19,7 @@ function MainPage() {
       </Box>
     </>
   );
+
 }
 
 export default MainPage;

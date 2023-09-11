@@ -27,6 +27,54 @@
       "email": "mndjlkad@gmail.com",
       "password": "Kontolodon123!",
       "id": 4
+    },
+    {
+      "firstName": "Nonok",
+      "lastName": "Lotnok",
+      "email": "kontolodon@kontol.com",
+      "password": "Kontol123!",
+      "username": "kontol666",
+      "id": 5
+    },
+    {
+      "firstName": "Lutung",
+      "lastName": "Kasarung",
+      "email": "lutung@ww.com",
+      "password": "Lutung1!",
+      "username": "lutung",
+      "id": 6
+    },
+    {
+      "firstName": "gyhujk",
+      "lastName": "rtyui",
+      "email": "sdfg@fgh.com",
+      "password": "Asdfgh123!",
+      "username": "ghjkl",
+      "id": 7
+    },
+    {
+      "firstName": "Nanang",
+      "lastName": "Supratman",
+      "email": "nangzky@gg.com",
+      "password": "Nanang1!",
+      "username": "nangzky",
+      "id": 8
+    },
+    {
+      "firstName": "Jojon",
+      "lastName": "Kasino",
+      "email": "Lololo@lo.com",
+      "password": "Nonok123!",
+      "username": "warkopdki",
+      "id": 9
+    },
+    {
+      "firstName": "Nonok",
+      "lastName": "Markonok",
+      "email": "Nonok@nok.com",
+      "password": "Nonok123!",
+      "username": "nonokz",
+      "id": 10
     }
   ],
   "events" : [
