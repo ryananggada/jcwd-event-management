@@ -36,8 +36,13 @@ function RegistrationPage() {
       const res = await api.get("/users");
       const { data } = res;
       const existingEmail = data.filter((user) => user.email === values.email);
+      const existingUser = data.filter((user) => user.username === values.username);
       if (existingEmail.length > 0) {
-        form.setFieldError("email", "email already used");
+        form.setFieldError("email", "E-mail already exist!");
+        return;
+      }
+      if (existingUser.length > 0) {
+        form.setFieldError("username", "Username already exist!");
         return;
       }
 
@@ -46,11 +51,11 @@ function RegistrationPage() {
       toast({
         status: "success",
         title: "Account has been created",
-        description: "redirecting you to login page",
+        description: "Redirecting you to home",
         duration: 3000,
         isClosable: true,
         onCloseComplete: () => {
-          navigate("/another-page");
+          navigate("/");
         },
       });
     } catch (error) {
@@ -79,6 +84,7 @@ function RegistrationPage() {
                 confirmPassword: "",
               }}
               validationSchema={yup.object({
+                username: yup.string().required("Username can't be blank"),
                 firstName: yup
                   .string()
                   .max(15, "Must be 15 characters or less")
@@ -139,6 +145,18 @@ function RegistrationPage() {
                       </FormControl>
                     )}
                   </Field>
+                  <Field name="username">
+                    {({ field, form }) => (
+                      <FormControl
+                        isInvalid={form.errors.username && form.touched.username}
+                        mb={5}
+                      >
+                        <FormLabel>Username</FormLabel>
+                        <Input {...field} />
+                        <FormErrorMessage>{form.errors.username}</FormErrorMessage>
+                      </FormControl>
+                    )}
+                  </Field>
                   <Field name="email">
                     {({ field, form }) => (
                       <FormControl
@@ -172,7 +190,7 @@ function RegistrationPage() {
                               w="full"
                               onClick={onToggleShowPassword}
                               borderLeftRadius={0}
-                              type="button  "
+                              type="button"
                             >
                               <Icon as={showPassword ? FaEyeSlash : FaEye} />
                             </Button>
@@ -224,7 +242,7 @@ function RegistrationPage() {
                     <Button
                       isLoading={forms.isSubmitting}
                       w="full"
-                      colorScheme="teal"
+                      backgroundColor="#e38100"
                       type="submit"
                     >
                       Register
