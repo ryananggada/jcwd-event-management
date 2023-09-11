@@ -9,8 +9,10 @@ import { Provider } from "react-redux";
 import store from "./store";
 
 function App() {
+
   return (
     <Provider store={store}>
+
       <Flex direction="column" minHeight="100vh">
         <Navbar />
         <Routes>
