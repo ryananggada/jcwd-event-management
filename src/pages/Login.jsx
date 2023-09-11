@@ -23,7 +23,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import * as yup from "yup";
 import api from "../api";
 import { useDispatch } from "react-redux";
-import authLogin from "../slices/authLogin";
+import { default as authLogin, login } from "../slices/authLogin";
 
 function Login() {
     const { isOpen: showPassword, onToggle: onToggleShowPassword } =
@@ -57,7 +57,7 @@ function Login() {
                 }
 
                 const [userProfile] = filteredUser;
-                dispatch(authLogin(userProfile));
+                dispatch(login(userProfile));
 
                 toast({
                     status: "success",
