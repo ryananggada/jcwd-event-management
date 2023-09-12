@@ -119,6 +119,7 @@ const AddEventPage = () => {
         </Button>
       </Container>
     </DashboardLayout>
+
   );
 };
 

@@ -49,6 +49,7 @@ function RegistrationPage() {
         return;
       }
 
+
       const { confirmPassword, ...body } = values;
       await api.post('/users', body);
       toast({
