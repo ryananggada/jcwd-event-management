@@ -1,17 +1,22 @@
 {
   "users": [
     {
-      "id": 1,
-      "firstname": "wawaw",
-      "lastname": "wawuwaw",
-      "email": "wawaw@wawaw.com",
-      "password": "Wawaw12"
+      "firstName": "Anida",
+      "lastName": "Bajumi",
+      "email": "anidasabrina@gmail.com",
+      "password": "Ayamgoreng1!",
+      "username": "anidasabrina",
+      "reffcode": "hubAnida",
+      "isAdmin": false,
+      "id": 1
     },
     {
       "firstName": "Joko",
       "lastName": "Prabowo",
       "email": "jokowiprabowo@gmail.com",
       "password": "1000Periode!",
+      "username": "jokoprabowo",
+      "isAdmin": true,
       "id": 2
     },
     {
@@ -19,62 +24,9 @@
       "lastName": "Subeje",
       "email": "besu@beje.coy",
       "password": "Anakpapa1!",
+      "username": "besuje",
+      "isAdmin": false,
       "id": 3
-    },
-    {
-      "firstName": "Ronaldio",
-      "lastName": "lilipaly",
-      "email": "mndjlkad@gmail.com",
-      "password": "Kontolodon123!",
-      "id": 4
-    },
-    {
-      "firstName": "Nonok",
-      "lastName": "Lotnok",
-      "email": "kontolodon@kontol.com",
-      "password": "Kontol123!",
-      "username": "kontol666",
-      "id": 5
-    },
-    {
-      "firstName": "Lutung",
-      "lastName": "Kasarung",
-      "email": "lutung@ww.com",
-      "password": "Lutung1!",
-      "username": "lutung",
-      "id": 6
-    },
-    {
-      "firstName": "gyhujk",
-      "lastName": "rtyui",
-      "email": "sdfg@fgh.com",
-      "password": "Asdfgh123!",
-      "username": "ghjkl",
-      "id": 7
-    },
-    {
-      "firstName": "Nanang",
-      "lastName": "Supratman",
-      "email": "nangzky@gg.com",
-      "password": "Nanang1!",
-      "username": "nangzky",
-      "id": 8
-    },
-    {
-      "firstName": "Jojon",
-      "lastName": "Kasino",
-      "email": "Lololo@lo.com",
-      "password": "Nonok123!",
-      "username": "warkopdki",
-      "id": 9
-    },
-    {
-      "firstName": "Nonok",
-      "lastName": "Markonok",
-      "email": "Nonok@nok.com",
-      "password": "Nonok123!",
-      "username": "nonokz",
-      "id": 10
     }
   ],
   "events" : [

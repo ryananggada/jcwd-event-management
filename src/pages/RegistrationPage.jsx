@@ -1,5 +1,5 @@
-import api from "../api";
-import { Formik, Field, Form } from "formik";
+import api from '../api';
+import { Formik, Field, Form } from 'formik';
 import {
   Box,
   Button,
@@ -15,11 +15,12 @@ import {
   InputRightElement,
   useDisclosure,
   useToast,
-} from "@chakra-ui/react";
-import { FaEye, FaEyeSlash } from "react-icons/fa6";
-import { useNavigate } from "react-router-dom";
-import * as yup from "yup";
-import YupPassword from "yup-password";
+} from '@chakra-ui/react';
+import { FaEye, FaEyeSlash } from 'react-icons/fa6';
+import { useNavigate } from 'react-router-dom';
+import * as yup from 'yup';
+import YupPassword from 'yup-password';
+import Layout from '../components/Layout';
 YupPassword(yup);
 
 function RegistrationPage() {
@@ -33,87 +34,91 @@ function RegistrationPage() {
 
   const handleSubmit = async (values, form) => {
     try {
-      const res = await api.get("/users");
+      const res = await api.get('/users');
       const { data } = res;
       const existingEmail = data.filter((user) => user.email === values.email);
-      const existingUser = data.filter((user) => user.username === values.username);
+      const existingUser = data.filter(
+        (user) => user.username === values.username
+      );
       if (existingEmail.length > 0) {
-        form.setFieldError("email", "E-mail already exist!");
+        form.setFieldError('email', 'E-mail already exist!');
         return;
       }
       if (existingUser.length > 0) {
-        form.setFieldError("username", "Username already exist!");
+        form.setFieldError('username', 'Username already exist!');
         return;
       }
 
+
       const { confirmPassword, ...body } = values;
-      await api.post("/users", body);
+      await api.post('/users', body);
       toast({
-        status: "success",
-        title: "Account has been created",
-        description: "Redirecting you to home",
-        duration: 3000,
+        status: 'success',
+        title: 'Account has been created',
+        description: 'Redirecting you to home',
+        duration: 1500,
         isClosable: true,
         onCloseComplete: () => {
-          navigate("/");
+          navigate('/');
         },
       });
     } catch (error) {
       toast({
-        status: "error",
-        title: "Something wrong",
+        status: 'error',
+        title: 'Something wrong',
         description: error.message,
         isClosable: true,
-        duration: 5000,
+        duration: 2500,
       });
     }
   };
 
   return (
-    <>
-      <Center minH="70vh">
-        <Container boxShadow="md" px={5} py={10}>
+    <Layout>
+      <Center minH='70vh'>
+        <Container boxShadow='md' px={5} py={10}>
           <Heading mb={3}>SIGN UP</Heading>
           <Box mb={7}>
             <Formik
               initialValues={{
-                firstName: "",
-                lastName: "",
-                email: "",
-                password: "",
-                confirmPassword: "",
+                firstName: '',
+                lastName: '',
+                email: '',
+                password: '',
+                confirmPassword: '',
+                isAdmin: false,
               }}
               validationSchema={yup.object({
                 username: yup.string().required("Username can't be blank"),
                 firstName: yup
                   .string()
-                  .max(15, "Must be 15 characters or less")
-                  .required("Required"),
+                  .max(15, 'Must be 15 characters or less')
+                  .required('Required'),
                 lastName: yup
                   .string()
-                  .max(20, "Must be 20 characters or less")
-                  .required("Required"),
+                  .max(20, 'Must be 20 characters or less')
+                  .required('Required'),
                 email: yup
                   .string()
-                  .email("Invalid email address")
-                  .required("Please enter your e-mail address"),
+                  .email('Invalid email address')
+                  .required('Please enter your e-mail address'),
                 password: yup
                   .string()
-                  .required("Please enter your password.")
+                  .required('Please enter your password.')
                   .matches(
-                    "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$",
-                    "Must contain at least 8 characters, one uppercase, one lowercase, one number and one special case character"
+                    '^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$',
+                    'Must contain at least 8 characters, one uppercase, one lowercase, one number and one special case character'
                   ),
                 confirmPassword: yup
                   .string()
-                  .oneOf([yup.ref("password"), null], "Passwords must match")
-                  .required("Required"),
+                  .oneOf([yup.ref('password'), null], 'Passwords must match')
+                  .required('Required'),
               })}
               onSubmit={handleSubmit}
             >
               {(forms) => (
                 <Form>
-                  <Field name="firstName">
+                  <Field name='firstName'>
                     {({ field, form }) => (
                       <FormControl
                         isInvalid={
@@ -129,7 +134,7 @@ function RegistrationPage() {
                       </FormControl>
                     )}
                   </Field>
-                  <Field name="lastName">
+                  <Field name='lastName'>
                     {({ field, form }) => (
                       <FormControl
                         isInvalid={
@@ -145,19 +150,23 @@ function RegistrationPage() {
                       </FormControl>
                     )}
                   </Field>
-                  <Field name="username">
+                  <Field name='username'>
                     {({ field, form }) => (
                       <FormControl
-                        isInvalid={form.errors.username && form.touched.username}
+                        isInvalid={
+                          form.errors.username && form.touched.username
+                        }
                         mb={5}
                       >
                         <FormLabel>Username</FormLabel>
                         <Input {...field} />
-                        <FormErrorMessage>{form.errors.username}</FormErrorMessage>
+                        <FormErrorMessage>
+                          {form.errors.username}
+                        </FormErrorMessage>
                       </FormControl>
                     )}
                   </Field>
-                  <Field name="email">
+                  <Field name='email'>
                     {({ field, form }) => (
                       <FormControl
                         isInvalid={form.errors.email && form.touched.email}
@@ -169,7 +178,7 @@ function RegistrationPage() {
                       </FormControl>
                     )}
                   </Field>
-                  <Field name="password">
+                  <Field name='password'>
                     {({ field, form }) => (
                       <FormControl
                         isInvalid={
@@ -181,16 +190,16 @@ function RegistrationPage() {
                         <InputGroup>
                           <Input
                             {...field}
-                            type={showPassword ? "text" : "password"}
-                            mr="4.5rem"
+                            type={showPassword ? 'text' : 'password'}
+                            mr='4.5rem'
                             borderRightRadius={0}
                           />
-                          <InputRightElement w="4.5rem">
+                          <InputRightElement w='4.5rem'>
                             <Button
-                              w="full"
+                              w='full'
                               onClick={onToggleShowPassword}
                               borderLeftRadius={0}
-                              type="button"
+                              type='button'
                             >
                               <Icon as={showPassword ? FaEyeSlash : FaEye} />
                             </Button>
@@ -202,7 +211,7 @@ function RegistrationPage() {
                       </FormControl>
                     )}
                   </Field>
-                  <Field name="confirmPassword">
+                  <Field name='confirmPassword'>
                     {({ field, form }) => (
                       <FormControl
                         isInvalid={
@@ -215,16 +224,16 @@ function RegistrationPage() {
                         <InputGroup>
                           <Input
                             {...field}
-                            type={showConfirmPassword ? "text" : "password"}
-                            mr="4.5rem"
+                            type={showConfirmPassword ? 'text' : 'password'}
+                            mr='4.5rem'
                             borderRightRadius={0}
                           />
-                          <InputRightElement w="4.5rem">
+                          <InputRightElement w='4.5rem'>
                             <Button
-                              w="full"
+                              w='full'
                               onClick={onToggleShowConfirmPassword}
                               borderLeftRadius={0}
-                              type="button  "
+                              type='button  '
                             >
                               <Icon
                                 as={showConfirmPassword ? FaEyeSlash : FaEye}
@@ -241,9 +250,9 @@ function RegistrationPage() {
                   <Box>
                     <Button
                       isLoading={forms.isSubmitting}
-                      w="full"
-                      backgroundColor="#e38100"
-                      type="submit"
+                      w='full'
+                      backgroundColor='#e38100'
+                      type='submit'
                     >
                       Register
                     </Button>
@@ -254,7 +263,7 @@ function RegistrationPage() {
           </Box>
         </Container>
       </Center>
-    </>
+    </Layout>
   );
 }
 

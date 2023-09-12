@@ -1,3 +1,4 @@
+
 import {
   Box,
   Input,
@@ -19,6 +20,8 @@ import {
 import wallpaper from "../assets/wallpaper.png";
 import { useEffect, useState } from "react";
 import api from "../api";
+import Layout from '../components/Layout';
+
 
 function MainPage() {
   const [events, setEvents] = useState([]);
@@ -50,7 +53,7 @@ function MainPage() {
     setSugest(filtered);
   };
   return (
-    <>
+    <Layout>
       <Box
         backgroundImage={wallpaper}
         bgRepeat="no-repeat"
@@ -135,8 +138,9 @@ function MainPage() {
             </Card>
           ))}
         </Grid>
+
       </Box>
-    </>
+    </Layout>
   );
 }
 
