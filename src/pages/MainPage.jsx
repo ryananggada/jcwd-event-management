@@ -138,7 +138,6 @@ function MainPage() {
             </Card>
           ))}
         </Grid>
-
       </Box>
     </Layout>
   );
