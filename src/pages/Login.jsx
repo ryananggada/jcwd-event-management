@@ -66,12 +66,14 @@ function Login() {
                     isClosable: true,
                     duration: 3000,
                     onCloseComplete: () => {
+                        dispatch(login(userProfile));
                         form.resetForm();
                         navigate("/");
                     },
                 });
             })
             .catch((error) => {
+                console.log(error)
                 toast({
                     status: "error",
                     title: "Something is wrong",
@@ -101,7 +103,7 @@ function Login() {
                     <Heading mb={3}>LOG IN</Heading>
                     <Text>
                         Don't have an account yet?{" "}
-                        <Link to="/register">
+                        <Link to="/registration-page">
                             <Button color="#e38100" fontSize="md" variant="link">
                                 Sign up
                             </Button>

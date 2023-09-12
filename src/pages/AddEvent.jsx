@@ -42,22 +42,6 @@ const AddEventPage = () => {
           type: value.type,
         };
 
-        try {
-          await axios.post("http://localhost:3001/tickets", input);
-
-          formik.setSubmitting(false);
-        } catch (err) {
-          formik.setSubmitting(false);
-          console.log(err);
-
-          toast({
-            status: "error",
-            title: "Something wrong",
-            description: err.message,
-            isClosable: true,
-            duration: 3000,
-          });
-        }
         forms.resetForm();
 
         console.log(value);
@@ -104,14 +88,7 @@ const AddEventPage = () => {
           <FormHelperText>{formik.errors.type || ""}</FormHelperText>
         </FormControl>
       </Stack>
-      <Button
-        mt={"50px"}
-        size={"lg"}
-        backgroundColor={"#e38100"}
-        type="submit"
-        onClick={() => formik.handleSubmit()}
-        disabled={formik.isSubmitting}
-      >
+      <Button mt={"50px"} size={"lg"} backgroundColor={"#e38100"} type="submit">
         Create
       </Button>
     </Container>
