@@ -26,6 +26,15 @@
       "password": "Frozen123#",
       "reffcode": "hubFiya",
       "id": 3
+    },
+    {
+      "firstName": "damar",
+      "lastName": "anjar",
+      "username": "damaranjar",
+      "email": "damaranjarhahaha@gmail.com",
+      "password": "Hahahaha123!",
+      "reffcode": "hubdamar",
+      "id": 4
     }
   ],
   "tickets": [

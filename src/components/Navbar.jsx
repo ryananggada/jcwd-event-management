@@ -1,10 +1,9 @@
-import { Box, Image, ButtonGroup, Button, Menu, MenuItem, MenuList, MenuGroup, MenuDivider, MenuButton, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Text, Center } from "@chakra-ui/react";
+import { Box, Image, ButtonGroup, Button, Menu, MenuItem, MenuList, MenuGroup, MenuButton, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Text, Center } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import logoTicket from "../assets/LogoTicket.png";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../slices/authLogin";
 import { useNavigate } from "react-router-dom";
-
 
 
 function Navbar(props) {
@@ -14,7 +13,10 @@ function Navbar(props) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen: isOpenReff, onOpen: onOpenReff, onClose: onCloseReff } = useDisclosure()
+  const { isOpen: isOpenAcc, onOpen: onOpenAcc, onClose: onCloseAcc } = useDisclosure()
+
+
 
 
 
@@ -44,18 +46,38 @@ function Navbar(props) {
                 </MenuButton>
                 <MenuList>
                   <MenuGroup title='Profile'>
-                    <MenuItem>My Account</MenuItem>
+                    <MenuItem onClick={onOpenAcc}>My Account</MenuItem>
+                    <Modal isOpen={isOpenAcc} onClose={onCloseAcc}>
+                      <ModalOverlay />
+                      <ModalContent>
+                        <ModalHeader>My Account</ModalHeader>
+                        <ModalCloseButton />
+                        <ModalBody>
+                          First Name: {profile.firstName}
+                          Last Name: {profile.lastName}
+                          Username: {profile.username}
+                          Password: {profile.password}
+                        </ModalBody>
+
+                        <ModalFooter>
+                          <Button colorScheme="gray" mr={3} onClick={onCloseAcc}>
+                            Close
+                          </Button>
+                        </ModalFooter>
+                      </ModalContent>
+                    </Modal>
                     <MenuItem>My Events </MenuItem>
                     <MenuItem>My Tickets </MenuItem>
-                    <MenuItem onClick={onOpen}>Referral Code</MenuItem>
-                    <Modal isOpen={isOpen} onClose={onClose}>
+                    <MenuItem onClick={onOpenReff}>Referral Code</MenuItem>
+                    <Modal isOpen={isOpenReff} onClose={onCloseReff}>
                       <ModalOverlay />
                       <ModalContent>
                         <ModalHeader>Referral Code</ModalHeader>
                         <ModalCloseButton />
                         <ModalBody>
-                          Share this code to get discount!
-                          <br />
+                          <Center>
+                            Share your referral code and get discount for you and your friends when they make first order!
+                          </Center>
                           <br />
                           <Box borderWidth='1px'>
                             <Center>
@@ -65,16 +87,12 @@ function Navbar(props) {
                         </ModalBody>
 
                         <ModalFooter>
-                          <Button colorScheme="gray" mr={3} onClick={onClose}>
+                          <Button colorScheme="gray" mr={3} onClick={onCloseReff}>
                             Close
                           </Button>
                         </ModalFooter>
                       </ModalContent>
                     </Modal>
-                  </MenuGroup>
-                  <MenuDivider />
-                  <MenuGroup title='Help'>
-                    <MenuItem>Settings</MenuItem>
                     <MenuItem
                       onClick={() => {
                         dispatch(logout());
