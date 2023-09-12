@@ -7,7 +7,6 @@ import {
   Stack,
   Text,
   useToast,
-
 } from '@chakra-ui/react';
 import axios from 'axios';
 import { useFormik } from 'formik';
@@ -80,6 +79,7 @@ const AddEventPage = () => {
             />
             <FormHelperText>{formik.errors.name || ''}</FormHelperText>
 
+
             <Input
               name='date'
               onChange={(e) => formik.setFieldValue('date', e.target.value)}
@@ -101,6 +101,7 @@ const AddEventPage = () => {
             <FormHelperText>{formik.errors.desc || ''}</FormHelperText>
 
             <Input
+
               name='type'
               onChange={(e) => formik.setFieldValue('type', e.target.value)}
               placeholder='Ticket Type'
