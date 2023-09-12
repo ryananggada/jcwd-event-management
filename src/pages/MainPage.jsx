@@ -18,6 +18,7 @@ import {
 } from "@chakra-ui/react";
 import wallpaper from "../assets/wallpaper.png";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import api from "../api";
 import Layout from "../components/Layout";
 
@@ -38,15 +39,15 @@ function MainPage() {
           isClosable: true,
         });
       });
-  }, []);
+  }, [toast]);
   console.log(events);
   const [searchData, setSearchData] = useState([]);
   const [sugest, setSugest] = useState([]);
-  const handleSearch = (event) => {
-    const input = event.target.value;
+  const handleSearch = (e) => {
+    const input = e.target.value;
     setSearchData(input);
     const filtered = events.filter((event) =>
-      event.artist.toLowerCase().includes(input.toLowerCase())
+      event.artist?.toLowerCase().includes(input?.toLowerCase())
     );
     setSugest(filtered);
   };
@@ -129,9 +130,16 @@ function MainPage() {
               <Divider />
               <CardFooter>
                 <Flex wrap={"wrap"}>
-                  <Button variant="solid" backgroundColor="#e38100" size="sm">
-                    Buy now
-                  </Button>
+                  <Link to="/checkout" state={event}>
+                    <Button
+                      variant="solid"
+                      backgroundColor="#e38100"
+                      size="sm"
+                      onClick={() => {}}
+                    >
+                      Buy now
+                    </Button>
+                  </Link>
                   <Button variant="ghost" color="#e38100" size="sm">
                     Add to cart
                   </Button>
