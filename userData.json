@@ -16,6 +16,7 @@
       "email": "jokowiprabowo@gmail.com",
       "password": "1000Periode!",
       "username": "jokoprabowo",
+      "reffcode": "hubJoko",
       "isAdmin": true,
       "id": 2
     },
@@ -25,6 +26,7 @@
       "email": "besu@beje.coy",
       "password": "Anakpapa1!",
       "username": "besuje",
+      "reffcode": "hubBeje",
       "isAdmin": false,
       "id": 3
     },
@@ -35,6 +37,7 @@
       "email": "damaranjarhahaha@gmail.com",
       "password": "Hahahaha123!",
       "reffcode": "hubdamar",
+      "isAdmin": false,
       "id": 4
     }
   ],
