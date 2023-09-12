@@ -5,13 +5,17 @@
       "firstname": "wawaw",
       "lastname": "wawuwaw",
       "email": "wawaw@wawaw.com",
-      "password": "Wawaw12"
+      "password": "Wawaw12",
+      "username": "wawawawaw",
+      "isAdmin": false
     },
     {
       "firstName": "Joko",
       "lastName": "Prabowo",
       "email": "jokowiprabowo@gmail.com",
       "password": "1000Periode!",
+      "username": "jokoprabowo",
+      "isAdmin": true,
       "id": 2
     },
     {
@@ -19,6 +23,8 @@
       "lastName": "Subeje",
       "email": "besu@beje.coy",
       "password": "Anakpapa1!",
+      "username": "besuje",
+      "isAdmin": false,
       "id": 3
     },
     {
@@ -26,6 +32,8 @@
       "lastName": "lilipaly",
       "email": "mndjlkad@gmail.com",
       "password": "Kontolodon123!",
+      "username": "kontolodon",
+      "isAdmin": false,
       "id": 4
     },
     {
@@ -34,6 +42,7 @@
       "email": "kontolodon@kontol.com",
       "password": "Kontol123!",
       "username": "kontol666",
+      "isAdmin": false,
       "id": 5
     },
     {
@@ -42,6 +51,7 @@
       "email": "lutung@ww.com",
       "password": "Lutung1!",
       "username": "lutung",
+      "isAdmin": false,
       "id": 6
     },
     {
@@ -50,6 +60,7 @@
       "email": "sdfg@fgh.com",
       "password": "Asdfgh123!",
       "username": "ghjkl",
+      "isAdmin": false,
       "id": 7
     },
     {
@@ -58,6 +69,7 @@
       "email": "nangzky@gg.com",
       "password": "Nanang1!",
       "username": "nangzky",
+      "isAdmin": false,
       "id": 8
     },
     {
@@ -66,6 +78,7 @@
       "email": "Lololo@lo.com",
       "password": "Nonok123!",
       "username": "warkopdki",
+      "isAdmin": false,
       "id": 9
     },
     {
@@ -74,7 +87,17 @@
       "email": "Nonok@nok.com",
       "password": "Nonok123!",
       "username": "nonokz",
+      "isAdmin": false,
       "id": 10
+    },
+    {
+      "firstName": "Ryan",
+      "lastName": "Anggada",
+      "email": "ryan@mail.com",
+      "password": "Ryan123!",
+      "isAdmin": false,
+      "username": "ryananggada",
+      "id": 11
     }
   ],
   "events" : [
