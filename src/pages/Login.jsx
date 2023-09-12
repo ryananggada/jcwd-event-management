@@ -15,7 +15,7 @@ import {
     Spacer,
     Text,
     useDisclosure,
-    useToast,
+    useToast
 } from '@chakra-ui/react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Field, Form, Formik } from 'formik';
@@ -27,11 +27,11 @@ import { login } from '../slices/authLogin';
 import Layout from '../components/Layout';
 
 function Login() {
-    const { isOpen: showPassword, onToggle: onToggleShowPassword } =
-        useDisclosure();
-    const toast = useToast();
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
+  const { isOpen: showPassword, onToggle: onToggleShowPassword } =
+    useDisclosure();
+  const toast = useToast();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
     const handleSubmit = (values, form) => {
         api
@@ -57,8 +57,7 @@ function Login() {
                     return;
                 }
 
-                const [userProfile] = filteredUser;
-
+        const [userProfile] = filteredUser;
                 toast({
                     status: 'success',
                     title: 'Login successful',

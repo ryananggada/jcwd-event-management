@@ -33,7 +33,6 @@ import { logout } from "../slices/authLogin";
 import { useNavigate } from "react-router-dom";
 
 
-
 function Navbar() {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   const profile = useSelector((state) => state.auth.profile);
@@ -183,7 +182,6 @@ function Navbar() {
       </Box >
 
     </>
-
   );
 }
 

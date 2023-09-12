@@ -8,6 +8,7 @@
       "username": "anidasabrina",
       "reffcode": "hubAnida",
       "isAdmin": true,
+
       "id": 1
     },
     {
@@ -271,5 +272,6 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
       "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcianjur.jabarekspres.com%2F2023%2F04%2F25%2Ftiga-bersaudara-gibb%2F&psig=AOvVaw1fBzvmsHenzB52FvNKI8yb&ust=1694336825338000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDC79aWnYEDFQAAAAAdAAAAABAE"
     }
+
   ]
 }
