@@ -76,7 +76,9 @@ function MainPage() {
             <Box marginRight="30vw" marginLeft="30vw">
               {searchData &&
                 sugest.map((event) => (
-                  <MenuItem bg={"white"}>{event.artist}</MenuItem>
+                  <MenuItem _last={{ borderBottomRadius: "md" }} bg={"white"}>
+                    {event.artist}
+                  </MenuItem>
                 ))}
             </Box>
           </Menu>
