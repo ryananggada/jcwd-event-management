@@ -49,7 +49,16 @@ function RegistrationPage() {
         return;
       }
 
-      const { confirmPassword, ...body } = values;
+
+
+      const body = {
+        firstName: values.firstName,
+        lastName: values.lastName,
+        username: values.username,
+        email: values.email,
+        password: values.password,
+        reffcode: "hub" + values.firstName,
+      };
       await api.post('/users', body);
       toast({
         status: 'success',
