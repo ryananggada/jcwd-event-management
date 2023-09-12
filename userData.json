@@ -40,6 +40,25 @@
       "reffcode": "hubdamar",
       "isAdmin": false,
       "id": 4
+    },
+    {
+      "firstName": "Bread",
+      "lastName": "Pitt",
+      "email": "breadpitt@mail.com",
+      "password": "Breadpitt123!",
+      "isAdmin": false,
+      "username": "breadpitt",
+      "reffcode": "hubBread",
+      "id": 5
+    },
+    {
+      "firstName": "Joko",
+      "lastName": "Jojo",
+      "username": "jojojo",
+      "email": "jojoj@jo.com",
+      "password": "Jojojo1!",
+      "reffcode": "hubJoko",
+      "id": 6
     }
   ],
   "events": [
