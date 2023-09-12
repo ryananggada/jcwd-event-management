@@ -1,4 +1,3 @@
-
 import {
   Box,
   Input,
@@ -20,8 +19,7 @@ import {
 import wallpaper from "../assets/wallpaper.png";
 import { useEffect, useState } from "react";
 import api from "../api";
-import Layout from '../components/Layout';
-
+import Layout from "../components/Layout";
 
 function MainPage() {
   const [events, setEvents] = useState([]);
@@ -75,10 +73,12 @@ function MainPage() {
         </Flex>
         <Box>
           <Menu>
-            {searchData &&
-              sugest.map((event) => (
-                <MenuItem bg={"white"}>{event.artist}</MenuItem>
-              ))}
+            <Box marginRight="30vw" marginLeft="30vw">
+              {searchData &&
+                sugest.map((event) => (
+                  <MenuItem bg={"white"}>{event.artist}</MenuItem>
+                ))}
+            </Box>
           </Menu>
         </Box>
       </Box>
@@ -138,7 +138,6 @@ function MainPage() {
             </Card>
           ))}
         </Grid>
-
       </Box>
     </Layout>
   );
