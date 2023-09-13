@@ -89,7 +89,7 @@ function Navbar() {
                             </Tooltip>
                             <Input py={2} px={4} as={EditableInput} />
                           </Editable>
-                          <br />
+                          <br d/>
                           <Heading size='md'>Last Name</Heading>
                           <Editable fontSize='xl'
                             defaultValue={profile.lastName}

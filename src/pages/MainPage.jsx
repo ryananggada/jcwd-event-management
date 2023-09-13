@@ -22,12 +22,14 @@ import { Link } from "react-router-dom";
 import api from "../api";
 import Layout from "../components/Layout";
 import EventCard from "../components/EventCard";
+import { useDispatch } from "react-redux";
 
 function MainPage() {
   const [events, setEvents] = useState([]);
   const [searchData, setSearchData] = useState([]);
   const [sugest, setSugest] = useState([]);
   const toast = useToast();
+  const dispatch = useDispatch()
 
   useEffect(() => {
     api
@@ -182,7 +184,9 @@ function MainPage() {
                       variant="solid"
                       backgroundColor="#e38100"
                       size="sm"
-                      onClick={() => {}}
+                      onClick={() => {
+
+                      }}
                     >
                       Buy now
                     </Button>
