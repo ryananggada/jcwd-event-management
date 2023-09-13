@@ -12,6 +12,9 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import React from "react";
+import { useDispatch } from "react-redux";
+import { Navigate } from "react-router-dom";
+import { addToCart, instantBuy } from "../slices/transaction";
 
 function EventCard({
   artist,
@@ -23,6 +26,10 @@ function EventCard({
   price,
   image,
 }) {
+
+  const dispatch = useDispatch()
+
+
   return (
     <Card maxW="sm">
       <CardBody>
@@ -53,10 +60,36 @@ function EventCard({
       <Divider />
       <CardFooter>
         <Flex wrap={"wrap"}>
-          <Button variant="solid" backgroundColor="#e38100" size="sm">
+          <Button variant="solid" backgroundColor="#e38100" size="sm" 
+            onClick={() => {
+              useDispatch(instantBuy({
+                artist,
+                genre,
+                date,
+                time,
+                location,
+                description,
+                price,
+                image,
+              }))
+              Navigate("/checkout")
+            }}
+          >
             Buy now
           </Button>
-          <Button variant="ghost" color="#e38100" size="sm">
+          <Button variant="ghost" color="#e38100" size="sm"
+          onClick={() => {
+            useDispatch(addToCart({
+              artist,
+              genre,
+              date,
+              time,
+              location,
+              description,
+              price,
+              image,
+            }))
+          }}>
             Add to cart
           </Button>
         </Flex>
