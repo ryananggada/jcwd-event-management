@@ -1,37 +1,67 @@
 import {
+  Box,
+  Image,
   Card,
   CardBody,
-  Image,
   Stack,
   Heading,
   Text,
   Divider,
   CardFooter,
   Button,
-  Center,
-} from '@chakra-ui/react';
-import React from 'react';
+  Flex,
+} from "@chakra-ui/react";
+import React from "react";
 
-function EventCard() {
+function EventCard({
+  artist,
+  genre,
+  date,
+  time,
+  location,
+  description,
+  price,
+  image,
+}) {
   return (
-    <Center>
-      <Card maxW='sm'>
-        <CardBody>
-          <Image src='https://placehold.co/400x300' />
-          <Stack mt={6} spacing={3}>
-            <Heading size='md'>Event name</Heading>
-            <Text>Description goes here</Text>
-            <Text color='blue.600' fontSize='2xl'>
-              IDR 69.420
-            </Text>
-          </Stack>
-        </CardBody>
-        <Divider />
-        <CardFooter>
-          <Button>Book now</Button>
-        </CardFooter>
-      </Card>
-    </Center>
+    <Card maxW="sm">
+      <CardBody>
+        <Image src={image} alt="" borderRadius="lg" w="20vw" h="35vh" />
+        <Stack mt="6" spacing="3">
+          <Heading size="md">{artist}</Heading>
+          <Text>
+            <b>Genre:</b> {genre}
+          </Text>
+          <Text>
+            <b>Date:</b> {date}
+          </Text>
+          <Text>
+            <b>Time:</b> {time}
+          </Text>
+          <Text>
+            <b>Location:</b> {location}
+          </Text>
+          <Text>
+            <b>Description :</b> <br />
+            {description}
+          </Text>
+          <Text color="#e38100" fontSize="2xl">
+            {price}
+          </Text>
+        </Stack>
+      </CardBody>
+      <Divider />
+      <CardFooter>
+        <Flex wrap={"wrap"}>
+          <Button variant="solid" backgroundColor="#e38100" size="sm">
+            Buy now
+          </Button>
+          <Button variant="ghost" color="#e38100" size="sm">
+            Add to cart
+          </Button>
+        </Flex>
+      </CardFooter>
+    </Card>
   );
 }
 
