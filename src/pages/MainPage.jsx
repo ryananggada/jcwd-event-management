@@ -18,6 +18,7 @@ import {
 } from "@chakra-ui/react";
 import wallpaper from "../assets/wallpaper.png";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import api from "../api";
 import Layout from "../components/Layout";
 import EventCard from "../components/EventCard";
@@ -28,8 +29,24 @@ function MainPage() {
   const [sugest, setSugest] = useState([]);
   const toast = useToast();
 
-  const handleSearch = (event) => {
-    const input = event.target.value;
+  useEffect(() => {
+    api
+      .get("/events")
+      .then((res) => {
+        setEvents(res.data);
+      })
+      .catch((err) => {
+        toast({
+          title: "something wrong",
+          description: err.message,
+          status: "error",
+          isClosable: true,
+        });
+      });
+  }, [toast]);
+
+  const handleSearch = (e) => {
+    const input = e.target.value;
     setSearchData(input);
 
     const filtered = events.filter((event) =>
@@ -124,7 +141,59 @@ function MainPage() {
           }}
           gap={6}
         >
-          {renderData()}
+          {events.map((event) => (
+            <Card maxW="sm">
+              <CardBody>
+                <Image
+                  src={event.image}
+                  alt=""
+                  borderRadius="lg"
+                  w="20vw"
+                  h="35vh"
+                />
+                <Stack mt="6" spacing="3">
+                  <Heading size="md">{event.artist}</Heading>
+                  <Text>
+                    <b>Genre:</b> {event.genre}
+                  </Text>
+                  <Text>
+                    <b>Date:</b> {event.date}
+                  </Text>
+                  <Text>
+                    <b>Time:</b> {event.time}
+                  </Text>
+                  <Text>
+                    <b>Location:</b> {event.location}
+                  </Text>
+                  <Text>
+                    <b>Description :</b> <br />
+                    {event.description}
+                  </Text>
+                  <Text color="#e38100" fontSize="2xl">
+                    {event.price}
+                  </Text>
+                </Stack>
+              </CardBody>
+              <Divider />
+              <CardFooter>
+                <Flex wrap={"wrap"}>
+                  <Link to="/checkout" state={event}>
+                    <Button
+                      variant="solid"
+                      backgroundColor="#e38100"
+                      size="sm"
+                      onClick={() => {}}
+                    >
+                      Buy now
+                    </Button>
+                  </Link>
+                  <Button variant="ghost" color="#e38100" size="sm">
+                    Add to cart
+                  </Button>
+                </Flex>
+              </CardFooter>
+            </Card>
+          ))}
         </Grid>
       </Box>
     </Layout>
